@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KULMEN VISUALS – Cine & Dron</title>
+
+  <!-- Tailwind CDN (rápido para empezar) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuente sans-serif con presencia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos propia -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-black text-white overflow-x-hidden scroll-smooth">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black/50 backdrop-blur-md">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-extrabold tracking-widest">KULMEN VISUALS</h1>
+      <a href="#contacto"
+         class="border border-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition">
+         Contactar
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="relative h-screen flex items-center justify-center">
+    <!-- Vídeo o imagen de fondo -->
+    <video class="absolute inset-0 w-full h-full object-cover"
+           src="/video/hero.mp4" autoplay muted loop playsinline></video>
+    <!-- Capa oscura -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div class="relative z-10 text-center px-4" data-animate>
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">
+        Cine & Dron que <span class="text-red-500">IMPRESIONA</span>
+      </h2>
+      <p class="max-w-xl mx-auto mb-8 text-lg md:text-xl">
+        Producción audiovisual disruptiva para marcas que quieren destacar con un storytelling de alto vuelo.
+      </p>
+      <a href="#servicios"
+         class="border px-8 py-3 rounded-full text-lg hover:bg-white hover:text-black transition">
+         Descubre servicios
+      </a>
+    </div>
+
+    <!-- Indicador scroll -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" data-animate>
+      <svg width="24" height="40" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+        <rect x="1" y="1" width="22" height="38" rx="11"/>
+        <path d="M12 10v6"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SERVICIOS (preview) -->
+  <section id="servicios" class="py-24 bg-black">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl md:text-5xl font-bold text-center mb-16" data-animate>SERVICIOS</h3>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Servicio 1 -->
+        <div class="group" data-animate>
+          <div class="aspect-video bg-[url('/img/drone.jpg')] bg-cover bg-center rounded-2xl
+                      group-hover:scale-105 transition-transform"></div>
+          <h4 class="text-xl font-semibold mt-4">Grabación Aérea</h4>
+          <p class="text-gray-300 mt-2">Planos imposibles con drones FPV y cámaras 4K/6K.</p>
+        </div>
+        <!-- Servicio 2 -->
+        <div class="group" data-animate>
+          <div class="aspect-video bg-[url('/img/cine.jpg')] bg-cover bg-center rounded-2xl
+                      group-hover:scale-105 transition-transform"></div>
+          <h4 class="text-xl font-semibold mt-4">Producción Cine</h4>
+          <p class="text-gray-300 mt-2">Cámaras RED & FX con ópticas cine para spots memorables.</p>
+        </div>
+        <!-- Servicio 3 -->
+        <div class="group" data-animate>
+          <div class="aspect-video bg-[url('/img/edicion.jpg')] bg-cover bg-center rounded-2xl
+                      group-hover:scale-105 transition-transform"></div>
+          <h4 class="text-xl font-semibold mt-4">Edición & Color</h4>
+          <p class="text-gray-300 mt-2">Montaje ágil, VFX y etalonaje que eleva tu historia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO teaser (marquesina) -->
+  <section id="portfolio" class="relative overflow-hidden bg-white text-black py-10">
+    <div class="whitespace-nowrap flex items-center gap-8 animate-[swipe_25s_linear_infinite]">
+      <img src="/img/frame1.jpg" class="h-48 rounded-2xl shadow-lg" />
+      <img src="/img/frame2.jpg" class="h-48 rounded-2xl shadow-lg" />
+      <img src="/img/frame3.jpg" class="h-48 rounded-2xl shadow-lg" />
+      <img src="/img/frame4.jpg" class="h-48 rounded-2xl shadow-lg" />
+      <!-- duplica imágenes para efecto infinito -->
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="py-24 bg-gradient-to-r from-red-600 to-pink-600 text-center" data-animate>
+    <h3 class="text-3xl md:text-5xl font-bold mb-6">¿Listo para volar alto con tu marca?</h3>
+    <a href="#contacto"
+       class="bg-black text-white px-10 py-4 rounded-full text-lg hover:scale-105 transition-transform">
+       Cuéntanos tu idea
+    </a>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-24 bg-black">
+    <div class="max-w-xl mx-auto px-6" data-animate>
+      <h4 class="text-2xl font-bold mb-6 text-center">Envíanos un mensaje</h4>
+
+      <!-- Cambia el action con tu endpoint de Formspree -->
+      <form action="https://formspree.io/f/tuID" method="POST" class="flex flex-col gap-4">
+        <input type="text"   name="nombre"  placeholder="Nombre"                      required
+               class="p-3 rounded bg-white/10 focus:outline-none" />
+        <input type="email"  name="email"   placeholder="Email"                       required
+               class="p-3 rounded bg-white/10 focus:outline-none" />
+        <textarea name="mensaje" rows="5"   placeholder="Cuéntanos qué necesitas"     required
+               class="p-3 rounded bg-white/10 focus:outline-none"></textarea>
+        <button class="border px-6 py-3 rounded-full hover:bg-white hover:text-black transition">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 bg-black/80 text-sm">
+    © 2025 KULMEN VISUALS. Todos los derechos reservados.
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

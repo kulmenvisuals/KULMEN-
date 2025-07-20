@@ -1,0 +1,9 @@
+:root{
+  font-family:"Montserrat",sans-serif;
+}
+
+/* Marquesina horizontal infinita */
+@keyframes swipe{
+  from{transform:translateX(100%);}
+  to  {transform:translateX(-100%);}
+}
