@@ -115,13 +115,23 @@
       <h4 class="text-2xl font-bold mb-6 text-center">Envíanos un mensaje</h4>
 
       <!-- Cambia el action con tu endpoint de Formspree -->
-      <form action="https://formspree.io/f/tuID" method="POST" class="flex flex-col gap-4">
+      <form action="https://formspree.io/f/xyzdkrka" method="POST" class="flex flex-col gap-4">
         <input type="text"   name="nombre"  placeholder="Nombre"                      required
                class="p-3 rounded bg-white/10 focus:outline-none" />
         <input type="email"  name="email"   placeholder="Email"                       required
                class="p-3 rounded bg-white/10 focus:outline-none" />
         <textarea name="mensaje" rows="5"   placeholder="Cuéntanos qué necesitas"     required
                class="p-3 rounded bg-white/10 focus:outline-none"></textarea>
+
+               <!-- Opcionales útiles -->
+  <input type="hidden" name="_subject"  value="Nuevo lead desde KULMEN VISUALS">
+  <input type="hidden" name="_replyto"  value=""> <!-- Formspree usa el campo 'email' -->
+  <input type="text"   name="_gotcha"   class="hidden" tabindex="-1" autocomplete="off"> <!-- honeypot -->
+  <!-- Redirección tras enviar (opcional) -->
+  <!-- <input type="hidden" name="_redirect" value="https://kulmenvisuals.github.io/kulmen-visuals/gracias.html"> -->
+
+  <p id="formMsg" class="text-sm hidden"></p>
+  
         <button class="border px-6 py-3 rounded-full hover:bg-white hover:text-black transition">
           Enviar
         </button>
