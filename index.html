@@ -103,37 +103,61 @@
 
 <!-- CASOS DE USO -->
 <section id="casos" class="py-24 bg-black">
-  <div class="max-w-6xl mx-auto px-6">
-    <h3 class="text-3xl md:text-5xl font-bold text-center mb-16" data-animate>Casos de uso</h3>
+  <div class="max-w-3xl mx-auto px-6">
+    <h3 class="text-3xl md:text-5xl font-bold text-center mb-12" data-animate>
+      Casos de uso
+    </h3>
 
-    <div class="grid md:grid-cols-4 gap-8">
+    <div class="space-y-6">
+
       <!-- Inmobiliaria -->
-      <figure class="group rounded-2xl overflow-hidden bg-white/5" data-animate>
-        <img src="img/casos/inmobiliaria.jpg" alt="Vídeo para inmobiliaria"
-             class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-500" />
-        <figcaption class="p-4 text-center text-sm tracking-wide uppercase opacity-80">Inmobiliaria</figcaption>
-      </figure>
+      <article class="case-card" data-animate>
+        <div class="case-grid">
+          <img src="img/casos/inmobiliaria.jpg" alt="Vídeo para inmobiliaria" class="case-img" />
+          <div class="case-body">
+            <h4 class="case-title">Inmobiliaria</h4>
+            <p class="case-text">Tours de propiedades, planos aéreos con dron y piezas para portales y redes.</p>
+            <a href="#contacto" class="border px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">Solicitar propuesta</a>
+          </div>
+        </div>
+      </article>
 
-      <!-- Eventos (usa la foto indicada) -->
-      <figure class="group rounded-2xl overflow-hidden bg-white/5" data-animate>
-        <img src="img/fotografia-de-parejas.jpeg" alt="Cobertura audiovisual de eventos"
-             class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-500" />
-        <figcaption class="p-4 text-center text-sm tracking-wide uppercase opacity-80">Eventos</figcaption>
-      </figure>
+      <!-- Eventos -->
+      <article class="case-card" data-animate>
+        <div class="case-grid">
+          <img src="img/casos/eventos/fotografia-de-parejas.jpeg" alt="Cobertura audiovisual de eventos" class="case-img" />
+          <div class="case-body">
+            <h4 class="case-title">Eventos</h4>
+            <p class="case-text">Cobertura integral: teaser, aftermovie y cápsulas verticales para social media.</p>
+            <a href="#contacto" class="border px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">Pedir presupuesto</a>
+          </div>
+        </div>
+      </article>
 
       <!-- Empresas -->
-      <figure class="group rounded-2xl overflow-hidden bg-white/5" data-animate>
-        <img src="img/casos/empresas.jpg" alt="Producción audiovisual para empresas"
-             class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-500" />
-        <figcaption class="p-4 text-center text-sm tracking-wide uppercase opacity-80">Empresas</figcaption>
-      </figure>
+      <article class="case-card" data-animate>
+        <div class="case-grid">
+          <img src="img/casos/empresas.jpg" alt="Producción audiovisual para empresas" class="case-img" />
+          <div class="case-body">
+            <h4 class="case-title">Empresas</h4>
+            <p class="case-text">Spot de marca, producto, industrial y corporativo. Cámaras cine + dron FPV.</p>
+            <a href="#contacto" class="border px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">Quiero información</a>
+          </div>
+        </div>
+      </article>
 
       <!-- Particulares -->
-      <figure class="group rounded-2xl overflow-hidden bg-white/5" data-animate>
-        <img src="img/casos/particulares.jpg" alt="Servicios audiovisuales para particulares"
-             class="aspect-[4/3] w-full object-cover group-hover:scale-105 transition-transform duration-500" />
-        <figcaption class="p-4 text-center text-sm tracking-wide uppercase opacity-80">Particulares</figcaption>
-      </figure>
+      <article class="case-card" data-animate>
+        <div class="case-grid">
+          <img src="img/casos/particulares.jpg" alt="Servicios audiovisuales para particulares" class="case-img" />
+          <div class="case-body">
+            <h4 class="case-title">Particulares</h4>
+            <p class="case-text">Bodas, celebraciones y piezas personales con estética cine y narrativa emocional.</p>
+            <a href="#contacto" class="border px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">Reservar fecha</a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>

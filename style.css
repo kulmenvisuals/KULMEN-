@@ -7,3 +7,51 @@
   from{transform:translateX(100%);}
   to  {transform:translateX(-100%);}
 }
+/* --- Casos de uso --- */
+.case-card{
+  border-radius: 1rem;                 /* rounded-2xl */
+  background: rgba(255,255,255,.05);   /* bg-white/5 */
+  border: 1px solid rgba(255,255,255,.10); /* border-white/10 */
+  overflow: hidden;
+  transition: border-color .2s ease, transform .25s ease;
+}
+.case-card:hover{
+  border-color: rgba(255,255,255,.20); /* hover:border-white/20 */
+  transform: translateY(-2px);
+}
+
+.case-grid{
+  display: grid;
+  grid-template-columns: 1fr;          /* móvil: apilado */
+}
+@media (min-width: 768px){             /* md: imagen fija a la izquierda */
+  .case-grid{
+    grid-template-columns: 160px 1fr;
+    min-height: 160px;
+  }
+}
+
+.case-img{
+  width: 100%;
+  height: 10rem;                        /* h-40 en móvil */
+  object-fit: cover;
+}
+@media (min-width: 768px){
+  .case-img{ height: 100%; }
+}
+
+.case-body{ padding: 1.25rem; }         /* p-5 */
+@media (min-width: 768px){
+  .case-body{ padding: 1.5rem; }        /* p-6 */
+}
+
+.case-title{
+  font-weight: 600;                      /* font-semibold */
+  font-size: 1.25rem;                    /* text-xl */
+  letter-spacing: -0.01em;               /* tracking-tight */
+}
+.case-text{
+  margin-top: .5rem;
+  color: rgba(255,255,255,.8);           /* text-gray-300 aprox */
+  font-size: .95rem;
+}
