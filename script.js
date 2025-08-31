@@ -26,5 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
       console.warn("Autoplay bloqueado");
     });
   }
+  document.addEventListener("DOMContentLoaded", () => {
+  // Reintento de autoplay (móvil/ahorro de datos)
+  const bg = document.getElementById("bg-video");
+  if (bg) {
+    const tryPlay = () => bg.play().catch(() => {/*silencio*/});
+    // intenta al cargar
+    tryPlay();
+    // intenta también al primer toque/click (iOS modo bajo consumo)
+    const kick = () => { tryPlay(); window.removeEventListener("touchstart", kick); window.removeEventListener("click", kick); };
+    window.addEventListener("touchstart", kick, { once: true });
+    window.addEventListener("click", kick, { once: true });
+  }
+});
 });
 });

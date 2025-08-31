@@ -42,9 +42,22 @@
 
   <!-- HERO -->
   <section id="hero" class="relative h-screen flex items-center justify-center">
-    <!-- Vídeo o imagen de fondo -->
-    <video class="absolute inset-0 w-full h-full object-cover"
-           src="/video/hero.mp4" autoplay muted loop playsinline></video>
+  <video
+  id="bg-video"
+  class="absolute inset-0 w-full h-full object-cover"
+  autoplay
+  muted
+  playsinline
+  webkit-playsinline
+  loop
+  preload="auto"
+  poster="img/hero_placeholder.jpg"
+>
+  <!-- fuentes explícitas ayudan a Safari/Android -->
+  <source src="video/hero.mp4" type="video/mp4" />
+  Tu navegador no soporta vídeo HTML5.
+</video>
+
     <!-- Capa oscura -->
     <div class="absolute inset-0 bg-black/50"></div>
 
