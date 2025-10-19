@@ -55,3 +55,26 @@
   color: rgba(255,255,255,.8);           /* text-gray-300 aprox */
   font-size: .95rem;
 }
+/* ===== Fondo abstracto oscuro (global) ===== */
+.abstract-bg{
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* siempre detrás */
+  background:
+    radial-gradient(60% 80% at 15% 10%, rgba(99,102,241,0.18), transparent 60%),
+    radial-gradient(70% 90% at 85% 20%, rgba(45,212,191,0.18), transparent 60%),
+    radial-gradient(80% 60% at 30% 85%, rgba(236,72,153,0.14), transparent 60%),
+    linear-gradient(180deg, #0b0f19 0%, #0a0a0a 60%, #0b0f19 100%);
+  background-repeat: no-repeat;
+  background-size: 140% 140%, 140% 140%, 140% 140%, cover;
+  background-position: 0% 0%, 100% 0%, 0% 100%, center;
+  filter: saturate(110%);
+  animation: abstract-drift 28s ease-in-out infinite;
+}
+
+/* Animación sutil del fondo (sin marear ni gastar demasiada CPU) */
+@keyframes abstract-drift{
+  0%   { background-position:   0%   0%, 100%   0%,   0% 100%, center; }
+  50%  { background-position:  50%  25%,  50%  50%, 25%  75%, center; }
+  100% { background-position:   0%   0%, 100%   0%,   0% 100%, center; }
+}
